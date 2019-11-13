@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76A2E956-99F3-452C-81C6-53D3CD85251D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VehicleInYardDLL</RootNamespace>
+    <AssemblyName>VehicleInYardDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindVehiclesInYardByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInYardByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehiclesInYardByVehicleIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehiclesInYardSimplyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInYardSimplyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehiclesInYardSummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInYardSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehiclesInYardVehicleIDDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInYardVehicleIDDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertVehicleInYardEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertVehicleInYardEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInYardClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehiclesInYardDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehiclesInYardDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindVehiclesInYardByDateRangeDataSet.xsc">
+      <DependentUpon>FindVehiclesInYardByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInYardByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInYardByDateRangeDataSet.xss">
+      <DependentUpon>FindVehiclesInYardByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardSimplyDataSet.xsc">
+      <DependentUpon>FindVehiclesInYardSimplyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardSimplyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInYardSimplyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInYardSimplyDataSet.xss">
+      <DependentUpon>FindVehiclesInYardSimplyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardSummaryDataSet.xsc">
+      <DependentUpon>FindVehiclesInYardSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardSummaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInYardSummaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInYardSummaryDataSet.xss">
+      <DependentUpon>FindVehiclesInYardSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardVehicleIDDateMatchDataSet.xsc">
+      <DependentUpon>FindVehiclesInYardVehicleIDDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInYardVehicleIDDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInYardVehicleIDDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInYardVehicleIDDateMatchDataSet.xss">
+      <DependentUpon>FindVehiclesInYardVehicleIDDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleInYardEntry.xsc">
+      <DependentUpon>InsertVehicleInYardEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertVehicleInYardEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertVehicleInYardEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertVehicleInYardEntry.xss">
+      <DependentUpon>InsertVehicleInYardEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehiclesInYardDataSet.xsc">
+      <DependentUpon>VehiclesInYardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehiclesInYardDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehiclesInYardDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VehiclesInYardDataSet.xss">
+      <DependentUpon>VehiclesInYardDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
