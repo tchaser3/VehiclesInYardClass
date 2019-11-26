@@ -36,6 +36,24 @@ namespace VehicleInYardDLL
         FindVehiclesInYardSummaryDataSet aFindVehiclesInYardSummaryDataSet;
         FindVehiclesInYardSummaryDataSetTableAdapters.FindVehiclesInYardSummaryTableAdapter aFindVehiclesInYardSummaryTableAdapter;
 
+        FindVehiclesInyardShowingVehicleIDDateRangeDataSet aFindVehiclesInYardShowingVehicleIDDateRangeDataSet;
+        FindVehiclesInyardShowingVehicleIDDateRangeDataSetTableAdapters.FindVehiclesInYardShowingVehicleDateRangeTableAdapter aFindVehiclesInYardShowingVehicleIDDateRangeTableAdapter;
+
+        public FindVehiclesInyardShowingVehicleIDDateRangeDataSet FindVehiclesInYardShowingVehicleIDDateRange(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindVehiclesInYardShowingVehicleIDDateRangeDataSet = new FindVehiclesInyardShowingVehicleIDDateRangeDataSet();
+                aFindVehiclesInYardShowingVehicleIDDateRangeTableAdapter = new FindVehiclesInyardShowingVehicleIDDateRangeDataSetTableAdapters.FindVehiclesInYardShowingVehicleDateRangeTableAdapter();
+                aFindVehiclesInYardShowingVehicleIDDateRangeTableAdapter.Fill(aFindVehiclesInYardShowingVehicleIDDateRangeDataSet.FindVehiclesInYardShowingVehicleDateRange, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Vehicles In Yard Class // Find Vehicles In Yard Showing Vehicle ID Date Range " + Ex.Message);
+            }
+
+            return aFindVehiclesInYardShowingVehicleIDDateRangeDataSet;
+        }
         public FindVehiclesInYardSummaryDataSet FindVehiclesInYardSummary(DateTime datStartDate, DateTime datEndDate)
         {
             try

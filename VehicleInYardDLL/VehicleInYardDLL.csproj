@@ -53,6 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindVehiclesInyardShowingVehicleIDDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindVehiclesInYardSimplyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +114,17 @@
     </None>
     <None Include="FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xss">
       <DependentUpon>FindVehiclesInYardByVehicleIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xsc">
+      <DependentUpon>FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehiclesInyardShowingVehicleIDDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xss">
+      <DependentUpon>FindVehiclesInyardShowingVehicleIDDateRangeDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindVehiclesInYardSimplyDataSet.xsc">
       <DependentUpon>FindVehiclesInYardSimplyDataSet.xsd</DependentUpon>
